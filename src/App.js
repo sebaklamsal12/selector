@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Shape from './Shape';
+class Selector extends Component {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    class Selector extends Component {
+        constructor() {
+            super();
+            this.state = {
+                selectedShape: 'square',
+            };
+        }
+        selectShape = () => {
+            this.setState({
+                selectedShape: shape,
+                isClicked :'true'
+            });
+        };
 
-export default App;
+        render() {
+            console.log('here is my state', this.state);
+            const { selectShape } = this.state;
+            console.log('this is my decleared function', this.selectShape)
+            return (
+
+
+                
+                <div className = "container" >
+                 <div className = "navbar" > 
+                   <div>
+                     selected: < span > {selectedShape} </span>
+                
+                    </div> 
+                    <div onClick={this.handleClick}>
+                      {isClicked} </div>
+                  </div>
+                                 
+                 <div className = "shape-list" >
+                 <shape shape = "square" selectShape={this.selectShape}/>
+                 <shape shape = "circle" selectShape={this.selectShape} />
+                 <shape shape = "traingle" selectShape={this.seleceShape} />
+                
+                </div > 
+                </div>
+            )
+        }
+
+    }
+    export default Selector;
