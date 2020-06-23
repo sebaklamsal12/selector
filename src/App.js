@@ -13,7 +13,7 @@ class Selector extends Component {
         selectShape = () => {
             this.setState({
                 selectedShape: shape,
-                isClicked :'true'
+                isClicked: 'true'
             });
         };
 
@@ -24,24 +24,36 @@ class Selector extends Component {
             return (
 
 
-                
-                <div className = "container" >
-                 <div className = "navbar" > 
-                   <div>
-                     selected: < span > {selectedShape} </span>
-                
-                    </div> 
-                    <div onClick={this.handleClick}>
-                      {isClicked} </div>
-                  </div>
-                                 
-                 <div className = "shape-list" >
-                 <shape shape = "square" selectShape={this.selectShape}/>
-                 <shape shape = "circle" selectShape={this.selectShape} />
-                 <shape shape = "traingle" selectShape={this.seleceShape} />
-                
-                </div > 
-                </div>
+
+                <
+                div className = "container" >
+                <
+                div className = "navbar" >
+                <
+                div >
+                selected: < span > { selectedShape } < /span>
+
+                <
+                /div>  <
+                div onClick = { this.handleClick } > { isClicked } < /div> < /
+                div >
+
+                <
+                div className = "shape-list" >
+                <
+                shape shape = "square"
+                selectShape = { this.selectShape }
+                /> <
+                shape shape = "circle"
+                selectShape = { this.selectShape }
+                /> <
+                shape shape = "traingle"
+                selectShape = { this.seleceShape }
+                />
+
+                <
+                /div >  < /
+                div >
             )
         }
 
