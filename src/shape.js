@@ -1,16 +1,17 @@
-import React from 'react';
+import React from "react";
 
-const SHape = (props) => {
+const Shape = (props) => {
     const { shape, selectShape } = props;
 
-    return () < div classNAme = { shape }
-    onClick = {
+    return ( <
+        div className = { shape }
+        onClick = {
             (evt) => {
                 selectShape(shape);
             }
         } >
-        <
-        /div>;
-);
+        < /div>
+    );
 };
-export default shape;
+
+export default Shape;

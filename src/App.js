@@ -35,8 +35,8 @@ class Selector extends Component {
 
                 <
                 /div>  <
-                div onClick = { this.handleClick } > { isClicked } < /div> < /
-                div >
+                div onClick = { this.handleClick } > { isClicked } < /div> <
+                /div>
 
                 <
                 div className = "shape-list" >
@@ -48,12 +48,12 @@ class Selector extends Component {
                 selectShape = { this.selectShape }
                 /> <
                 shape shape = "traingle"
-                selectShape = { this.seleceShape }
+                selectShape = { this.selectShape }
                 />
 
                 <
-                /div >  < /
-                div >
+                /div >  <
+                /div>
             )
         }
 
